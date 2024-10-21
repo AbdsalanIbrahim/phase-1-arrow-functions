@@ -1,57 +1,67 @@
-// Function Declaration
+const greet = function(name) {
+    return `Hello, ${name}!`;
+};
+
+const add = (a, b) => a + b;
+
+const square = x => x * x;
+
+const sum = (a, b) => {
+    console.log(`Adding ${a} and ${b}`); 
+    return a + b;
+};
+
+console.log(greet("Alice"));  
+console.log(add(5, 3));       
+console.log(square(4));       
+console.log(sum(10, 20));     
+
+const nums = [1, 2, 3, 4, 5];
+
+const squares = nums.map(num => num ** 2);
+console.log(squares);          
+
+const evenNumbers = nums.filter(num => num % 2 === 0);
+console.log(evenNumbers);      
+
 function foo() {
     return 'bar';
 }
-console.log(foo()); // Outputs: bar
-
-// Function Expression
+console.log(foo()); 
 const fooExpression = function() {
     return 'bar';
 };
-console.log(fooExpression()); // Outputs: bar
-
-// Arrow Function with two parameters
-const add = (parameter1, parameter2) => parameter1 + parameter2;
-console.log(add(2, 3)); // Outputs: 5
-
-// Arrow Function with a single parameter (parentheses optional)
+console.log(fooExpression()); 
 const twoAdder = x => x + 2;
-console.log(twoAdder(3)); // Outputs: 5
+console.log(twoAdder(3)); 
 
-// Arrow Function with multiple statements
-const sum = (parameter1, parameter2) => {
-    console.log(`Adding ${parameter1}`);
-    console.log(`Adding ${parameter2}`);
+const sumAgain = (parameter1, parameter2) => {
+    console.log(`Adding ${parameter1}`); 
+    console.log(`Adding ${parameter2}`); 
     return parameter1 + parameter2;
 };
-console.log(sum(1, 2)); // Outputs: 3
+console.log(sumAgain(1, 2)); 
 
-// Using Arrow Function with .map()
-const nums = [1, 2, 3];
-const squares = nums.map(x => x ** 2);
-console.log(squares); // Outputs: [1, 4, 9]
-
-// Example with DOM elements
+const squaresAgain = nums.map(x => x ** 2);
+console.log(squaresAgain); 
 const overdueTodoItems = [
-    { className: 'pending' },
-    { className: 'pending' },
-    { className: 'pending' }
+    { className: 'zino' },
+    { className: 'huncho' },
+    { className: 'zr' }
 ];
 
 const finishedItems = overdueTodoItems.map(item => {
-    item.className = "complete"; // Mark as complete
+    item.className = "complete"; 
     return item;
 });
-console.log(finishedItems); // Outputs the modified items
-
-// Billing software example
+console.log(finishedItems); 
 const lapsedUserAccounts = [
-    { address: 'user1@example.com' },
-    { address: 'user2@example.com' }
+    { address: 'manka12@gmail.com' },
+    { address: 'duran10@gmail.com' }
 ];
 
-lapsedUserAccounts.map(u => sendBillTo(u.address)); // Hypothetical function to send bills
+lapsedUserAccounts.map(u => sendBillTo(u.address)); 
 
 function sendBillTo(address) {
-    console.log(`Bill sent to: ${address}`);
+    console.log(`Bill sent to: ${address}`); 
 }
